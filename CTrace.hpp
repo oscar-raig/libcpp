@@ -6,8 +6,7 @@ using namespace std;
 
 
 
-class CTrace
-{
+class CTrace{
 
 public:
     
@@ -16,11 +15,18 @@ public:
 };
 
 
-class CFuncTrace
-{
-    
+class CFuncTrace{
 public:
-    CFuncTrace (){};
-    void trace(char *szToTrace);
+	std::string m_szFunctionName;
+public:
+    CFuncTrace (string szFunctionName){
+		m_szFunctionName = szFunctionName;
+		cout << m_szFunctionName + ">>" << endl;
+	};
+	
+	~CFuncTrace(){
+		cout << m_szFunctionName + "<<" << endl;
+	}
+	void trace(const char *szFormat, ...);
     
 };

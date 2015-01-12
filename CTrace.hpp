@@ -31,9 +31,9 @@ public:
 public:
     CFuncTrace (bool traceOnCreateAndDestroy,string FunctionName){
 
-		levelTrace = CTrace::level::TRACE_INFO;
-//		levelTrace = CTrace::level::TRACE_DEBUG;
-//		levelTrace = CTrace::level::TRACE_ERROR;
+		levelTrace = CTrace::TRACE_INFO;
+//		levelTrace = CTrace::TRACE_DEBUG;
+//		levelTrace = CTrace::TRACE_ERROR;
 		
 		this->FunctionName = FunctionName;
 		this->traceOnCreateAndDestroy = traceOnCreateAndDestroy;
